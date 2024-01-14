@@ -1,11 +1,12 @@
-# Runing this Project       
+# Running this Project       
 Clone the repositiory on your machine and run:
 
 ```bash
 pnpm i
 ```
 
-to install the required dependencies, after that you can run:
+to install the required dependencies, 
+after that you can run:
 
 ```bash
 pnpm run dev
