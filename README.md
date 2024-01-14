@@ -14,3 +14,10 @@ pnpm run dev
 
 This will serve the app on [this url](http://localhost:5173)  which would be enough to start downloading mp3 from Youtube links.
 
+
+# TODO: 
+
+[] filename should be the name of the Youtube video -> ytdl core cant be imported client side for some reason
+[] add some ui library (shadcn oder bits)
+[] try to send the progess of the download to the client and add a progess-bar instead of the spinner
+

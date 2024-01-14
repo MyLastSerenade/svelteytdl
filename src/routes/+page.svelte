@@ -2,7 +2,6 @@
 	import Loading from '../components/Loading.svelte';
 
 	let url = $state(null);
-	let show = $state(false);
 	let loading = $state(false);
 	let fileName = $state('audio.mp3');
 
