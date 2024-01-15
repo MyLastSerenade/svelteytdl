@@ -20,4 +20,5 @@ This will serve the app on [this url](http://localhost:5173)  which would be eno
 - [x] filename should be the name of the Youtube video -> ytdl core cant be imported client side for some reason
 - [ ] add some ui library (shadcn oder bits or maybe skeleton?)
 - [ ] try to send the progess of the download to the client and add a progess-bar instead of the spinner
+- [ ] add Dockerfile in order to run it inside a docker environment
 
