@@ -1,15 +1,14 @@
 <script lang="ts">
-	import Loading from '../components/Loading.svelte';
+	import { ProgressRadial } from '@skeletonlabs/skeleton';
 
 	let url = $state(null);
 	let loading = $state(false);
 	let fileName = $state('audio.mp3');
 
-
 	async function fetchAudio() {
-		loading = true
+		loading = true;
 		fileName = 'audio.mp3';
-		
+
 		const res = await fetch(`/api/getAudioFile?url=${url}`, {
 			method: 'GET',
 			headers: {
@@ -24,25 +23,29 @@
 		downloadLink.download = `${fileName}`;
 		downloadLink.click();
 
-		loading = false
+		loading = false;
 	}
 
 	// https://www.youtube.com/watch?v=kFU7nRe7C0A
 </script>
 
-<div class="relative pt-12">
-	<div class="absolute left-[20%] z-10 h-[240px] w-[240px] rounded-full bg-purple-600 blur-3xl" />
-	<div class="relative z-20 flex max-w-[400px] flex-col items-center gap-4">
-		<p class="text-center text-lg">Please copy the Url to the Youtube-Video into this field:</p>
-		<input name="url" class="form-field" type="text" placeholder="URL" bind:value={url} />
-		<button
-			type="button"
-			class="w-[120px] rounded-lg border-2 border-gray-100 bg-transparent text-lg text-white"
-			on:click={() => fetchAudio()}>Send it...</button
-		>
+<div class="">
+	<div class="flex flex-col items-center gap-4">
+		<p class="g">Please copy the Url to the Youtube-Video into this field:</p>
+		<input
+			name="url"
+			class="input h-12 placeholder:pl-4 placeholder:text-xl placeholder:font-thin placeholder:opacity-50 active:bg-black"
+			type="text"
+			placeholder="https://youtube.com/watch?v=...."
+			bind:value={url}
+			autocomplete="off"
+		/>
+		<button type="button" class="variant-ghost-surface btn btn-xl" on:click={() => fetchAudio()}>
+			<span>Send it...</span>
+		</button>
 		{#if loading}
-			<div class="mr-6 h-[50px] w-[50px]">
-				<Loading />
+			<div class="">
+				<ProgressRadial width={'w-16'} stroke={100} />
 			</div>
 		{/if}
 	</div>
