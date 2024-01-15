@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Loading from '../components/Loading.svelte';
 	import { ProgressRadial } from '@skeletonlabs/skeleton';
 
 	let url = $state(null);
@@ -31,15 +30,22 @@
 </script>
 
 <div class="">
-	<div class="flex flex-col items-center gap-2">
+	<div class="flex flex-col items-center gap-4">
 		<p class="g">Please copy the Url to the Youtube-Video into this field:</p>
-		<input name="url" class="input" type="text" placeholder="URL" bind:value={url} />
-		<button type="button" class="variant-ghost-surface btn" on:click={() => fetchAudio()}>
+		<input
+			name="url"
+			class="input h-12 placeholder:pl-4 placeholder:text-xl placeholder:font-thin placeholder:opacity-50 active:bg-black"
+			type="text"
+			placeholder="https://youtube.com/watch?v=...."
+			bind:value={url}
+			autocomplete="off"
+		/>
+		<button type="button" class="variant-ghost-surface btn btn-xl" on:click={() => fetchAudio()}>
 			<span>Send it...</span>
 		</button>
-		{#if !loading}
+		{#if loading}
 			<div class="">
-				<ProgressRadial width={"w-24"}/>
+				<ProgressRadial width={'w-16'} stroke={100} />
 			</div>
 		{/if}
 	</div>
