@@ -24,11 +24,13 @@ p,a {
 }
  */
 
- /* Example: secondary color via Tailwind: */
+/* Example: secondary color via Tailwind: */
 /*  body { @apply bg-surface-400 dark:bg-surface-700; } */
-body { @apply bg-surface-50-900-token; }
+body {
+	@apply bg-surface-50-900-token;
+}
 
- :root [data-theme='gold-nouveau'] {
+:root [data-theme='gold-nouveau'] {
 	--theme-rounded-base: 20px;
 	--theme-rounded-container: 4px;
 }

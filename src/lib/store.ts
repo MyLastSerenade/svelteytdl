@@ -1,5 +1,5 @@
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store';
 
-export const progression = writable("")
+export const progression = writable('');
 
-progression.update((p) => p)
+progression.update((p) => p);
