@@ -3,9 +3,9 @@ version: "3"
 
 services:
   external:
-    container_name: external
+    container_name: svelteytdl
     # The name of the image that will be created when building this container
-    image: external-website
+    image: svelteytdl
     build:
       context: .
       dockerfile: Dockerfile
@@ -21,3 +21,5 @@ services:
     restart: unless-stopped
     ports:
       - 3000:5050
+
+project_name: svelteytdl
