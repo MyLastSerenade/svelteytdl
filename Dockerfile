@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . .
 # This has to be changed asap, Skeleton currently has no svelte 5 support :sadge:
-RUN npm i --legacy-peeer-deps
+
+RUN npm i --legacy-peer-deps
 
 RUN npm run build
 
