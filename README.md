@@ -19,7 +19,7 @@ This will serve the app on [this url](http://localhost:5173) which would be enou
 
 - <code>git clone https://github.com/MyLastSerenade/svelteytdl.git</code>
 - <code>cd svelteytdl</code>
-- <code>docker build -t svelteytdl -f /home/.../test/svelteytdl/Dockerfile /home/.../test/svelteytdl</code>
+- <code>docker build -t svelteytdl -f /home/USERNAME/svelteytdl/Dockerfile /home/USERNAME/svelteytdl</code>
 - <code>sudo docker-compose up -d</code>
 
 # TODO:
