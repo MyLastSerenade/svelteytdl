@@ -9,6 +9,14 @@
 		loading = true;
 		fileName = 'audio.mp3';
 
+		const result = await fetch(`/api/getTitle?url=${url}`, {
+			method: 'GET',
+			headers: {
+				'Content-Type': 'audio/mpeg'
+			}
+		});
+		fileName = await result.json();
+
 		const res = await fetch(`/api/getAudioFile?url=${url}`, {
 			method: 'GET',
 			headers: {
@@ -25,8 +33,6 @@
 
 		loading = false;
 	}
-
-	// https://www.youtube.com/watch?v=kFU7nRe7C0A
 </script>
 
 <div class="">
@@ -50,9 +56,3 @@
 		{/if}
 	</div>
 </div>
-
-<style>
-	.form-field {
-		@apply box-border max-h-[50px] min-w-[300px] max-w-[320px] rounded-md border border-gray-100 bg-black font-thin text-cyan-400;
-	}
-</style>

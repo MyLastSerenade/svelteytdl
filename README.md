@@ -19,7 +19,7 @@ This will serve the app on [this url](http://localhost:5173) which would be enou
 
 - <code>git clone https://github.com/MyLastSerenade/svelteytdl.git</code>
 - <code>cd svelteytdl</code>
-- <code>docker build -t svelteytdl -f /home/seb/test/svelteytdl/Dockerfile /home/seb/test/svelteytdl</code>
+- <code>docker build -t svelteytdl -f /home/.../test/svelteytdl/Dockerfile /home/.../test/svelteytdl</code>
 - <code>sudo docker-compose up -d</code>
 
 # TODO:
@@ -27,4 +27,4 @@ This will serve the app on [this url](http://localhost:5173) which would be enou
 - [x] filename should be the name of the Youtube video -> ytdl core cant be imported client side for some reason
 - [x] add some ui library (shadcn oder bits or maybe skeleton?)
 - [x] add Dockerfile in order to run it inside a docker environment
-- [ ] try to send the progess of the download to the client and add a progess-bar instead of the spinner
+- [ ] (try to send the progess of the download to the client and add a progess-bar instead of the spinner)

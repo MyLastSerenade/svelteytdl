@@ -8,7 +8,6 @@ export async function getAudio(url: string) {
 	if (ffmppegPath.path) {
 		ffmpeg.setFfmpegPath(ffmppegPath.path);
 		let stream = ytdl(String(url), { filter: 'audioonly' });
-		title = (await ytdl.getBasicInfo(String(url))).videoDetails.title.replaceAll('"', '');
 
 		const chunks: Buffer[] = [];
 
@@ -49,4 +48,9 @@ export async function getAudio(url: string) {
 	}
 
 	return null;
+}
+
+export async function getTitle(url: string): Promise<string> {
+	return (await ytdl.getBasicInfo(String(url))).videoDetails.title.replaceAll('"', '');
+
 }

@@ -1,4 +1,4 @@
-import { getAudio } from '$lib';
+import { getAudio } from '$lib/utilsYoutube';
 import type { Actions } from './$types';
 
 export const actions: Actions = {
