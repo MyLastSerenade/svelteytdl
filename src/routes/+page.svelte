@@ -46,13 +46,11 @@
 			bind:value={url}
 			autocomplete="off"
 		/>
-		<button type="button" class="variant-ghost-surface btn btn-xl" on:click={() => fetchAudio()}>
+		<button disabled={loading} type="button" class="variant-ghost-surface btn btn-xl" on:click={() => fetchAudio()}>
 			<span>Send it...</span>
 		</button>
 		{#if loading}
-			<div class="">
 				<ProgressRadial width={'w-16'} stroke={100} />
-			</div>
 		{/if}
 	</div>
 </div>
