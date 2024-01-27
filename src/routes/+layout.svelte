@@ -11,4 +11,8 @@
 	</h1>
 
 	<slot />
+	<div class="flex flex-row gap-4">
+		<a class="anchor" href="/">Home</a>
+		<a class="anchor" href="/video">Video</a>
+	</div>
 </div>

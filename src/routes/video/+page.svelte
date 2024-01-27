@@ -47,7 +47,7 @@
 			autocomplete="off"
 		/>
 		<button disabled={loading} type="button" class="variant-ghost-surface btn btn-xl" on:click={() => fetchAudio()}>
-			<span>Send it...</span>
+			<span>Download mp4</span>
 		</button>
 		{#if loading}
 				<ProgressRadial width={'w-16'} stroke={100} />
