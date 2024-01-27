@@ -54,3 +54,8 @@ export async function getTitle(url: string): Promise<string> {
 	return (await ytdl.getBasicInfo(String(url))).videoDetails.title.replaceAll('"', '');
 
 }
+
+
+export async function getVideo(url: string) {
+	return ytdl(String(url));
+}
