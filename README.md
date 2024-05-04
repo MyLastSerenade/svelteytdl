@@ -1,3 +1,7 @@
+# Before deploying on a pi
+
+Changed the outputDir to /public and the adapter to auto in order to deploy the app on Vercel. Not sure if it still works in a Docker environment.
+
 # Running this Project
 
 Clone the repositiory on your machine and run:
